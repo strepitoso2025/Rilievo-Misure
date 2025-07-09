@@ -1,0 +1,489 @@
+<head><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>
+body {
+  background-image: url('background-pattern.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  color: #f0f0f0;
+}
+
+label, h2, h3, p, .form-section-title {
+  color: #f0f0f0 !important;
+}
+
+input, select, textarea {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ccc;
+}
+
+button, .button {
+  background-color: #444;
+  color: #fff;
+  border: none;
+}
+
+.form-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 8px;
+}
+</style><style media="print">
+body, html, label, h1, h2, h3, p, div, span, input, select, textarea {
+  color: #000 !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+</style><style>
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.form-container {
+  max-width: 95vw;
+  margin: auto;
+  box-sizing: border-box;
+  transform: scale(0.98);
+  transform-origin: top center;
+}
+</style></head>
+<style>body {
+    font-family: 'Georgia', serif;
+    color: #000;
+  }
+
+  .form-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+    background-color: #f8f8f8;
+    border-radius: 16px;
+    border: 1px solid #ccc;
+  }
+
+  h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: normal;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin: 30px 0 15px;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 5px;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .form-group input, .form-group select, .form-group textarea {
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  .measure-image {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .measure-image img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 60px;
+  }
+@media print {
+  body > *:not(.form-container) {
+  }
+  .form-container {
+    position: static !important;
+    visibility: visible !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .form-container {
+    padding: 20px !important;
+  }
+  button {
+    width: 100% !important;
+    margin-bottom: 10px !important;
+  }
+}
+@media print {
+  body {
+    background: white !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .form-container {
+    visibility: visible !important;
+    position: static !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+
+@media print {
+  html, body {
+  }
+}
+
+@media print {
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    height: 100%;
+    -webkit-print-color-adjust: exact;
+  }
+  .form-container {
+    max-width: 800px !important;
+    margin: auto !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  button, .form-container button, .form-container p {
+    display: none !important;
+  }
+}
+@media print {
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    color: #000;
+    font-family: 'Georgia', serif;
+  }
+
+  .form-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background: white !important;
+  }
+
+  .form-container h2 {
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+  }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    margin-top: 25px;
+    padding-bottom: 3px;
+  }
+
+  .form-group label {
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+
+  .form-group input, 
+  .form-group select, 
+  .form-group textarea {
+    border: 1px solid #000 !important;
+    font-size: 11px !important;
+    padding: 3px !important;
+    background: transparent;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr !important;
+    column-gap: 30px;
+    row-gap: 10px;
+  }
+
+  button, .form-container button, .form-container p, .measure-image {
+    display: none !important;
+  }
+}
+
+@media print {
+  a[href*="youtu"], 
+  a[href*="youtu"]::before, 
+  div[style*="font-size: 12px"] {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+@media print {
+  .form-container {
+    transform: scale(0.95);
+    transform-origin: top left;
+  }
+}
+
+@media print {
+  .firma-cliente-stampa {
+    display: block !important;
+  }
+}
+
+@media print {
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    color: black !important;
+    width: 100%;
+    height: auto;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .form-container, .form-container * {
+    visibility: visible;
+  }
+
+  .form-container {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    transform: scale(0.95);
+    transform-origin: top left;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+</style>
+<div class="form-container" style="background-image: url('background-pattern.jpg'); background-size: cover; background-repeat: repeat; background-position: center;  transform: scale(0.95); transform-origin: top left; width: 105%;">
+<h2>Camicie Su Misura GEST<br/>LABORATORIO PERONI</h2>
+<div class="section-title">Dati Cliente</div>
+<div class="form-grid">
+<div class="form-group">
+<label>Nome e Cognome</label>
+<input type="text"/>
+</div>
+<div class="form-group">
+<label>Telefono</label>
+<input type="text"/>
+</div>
+<div class="form-group">
+<label>Email</label>
+<input type="email"/>
+</div>
+<div class="form-group">
+<label>Data rilievo</label>
+<input type="date"/>
+</div>
+</div>
+<div class="section-title">Misure Cliente (in cm)</div>
+<div class="measure-image">
+<img alt="Immagine punti di misura" src="https://via.placeholder.com/600x300?text=Immagine+Punti+Misura"/>
+</div>
+<div class="form-grid">
+<div class="form-group"><label>Collo<a href="https://youtu.be/_z_WnEIP4nQ?list=TLGGnmuPOepvZBEwOTA3MjAyNQ" target="_blank"><img height="16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_(2017).svg/32px-YouTube_full-color_icon_(2017).svg.png" style="margin-left:6px;vertical-align:middle;" width="16"/></a></label><input type="text"/>
+<div style="text-align: center; font-size: 12px; margin-top: 4px;">
+
+</div>
+</div>
+<div class="form-group"><label>Spalle<a href="https://youtu.be/Z7Hj7hZB0QE?list=TLGGMR_YKrIz2hEwOTA3MjAyNQ" target="_blank"><img height="16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_(2017).svg/32px-YouTube_full-color_icon_(2017).svg.png" style="margin-left:6px;vertical-align:middle;" width="16"/></a></label><input type="text"/>
+<div style="text-align: center; font-size: 12px; margin-top: 4px;">
+
+</div>
+</div>
+<div class="form-group"><label>Torace<a href="https://youtu.be/uen-5mLTAPM?list=TLGGcqT5UJ9jJOgwOTA3MjAyNQ" target="_blank"><img height="16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_(2017).svg/32px-YouTube_full-color_icon_(2017).svg.png" style="margin-left:6px;vertical-align:middle;" width="16"/></a></label><input type="text"/>
+<div style="text-align: center; font-size: 12px; margin-top: 4px;">
+
+</div>
+</div>
+<div class="form-group"><label>Vita<a href="https://youtu.be/ByhASTjT2r0?list=TLGG4z4bj5AFs9YwOTA3MjAyNQ" target="_blank"><img height="16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_(2017).svg/32px-YouTube_full-color_icon_(2017).svg.png" style="margin-left:6px;vertical-align:middle;" width="16"/></a></label><input type="text"/>
+<div style="text-align: center; font-size: 12px; margin-top: 4px;">
+
+</div>
+</div>
+<div class="form-group"><label>Bacino<a href="https://youtu.be/ByhASTjT2r0?list=TLGG4z4bj5AFs9YwOTA3MjAyNQ" target="_blank"><img height="16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_(2017).svg/32px-YouTube_full-color_icon_(2017).svg.png" style="margin-left:6px;vertical-align:middle;" width="16"/></a></label><input type="text"/>
+<div style="text-align: center; font-size: 12px; margin-top: 4px;">
+
+</div>
+</div>
+<div class="form-group"><label>Lunghezza camicia<a href="https://youtu.be/ORHUIO6f3Mg?list=TLGG0mAuTFPdb_0wOTA3MjAyNQ" target="_blank"><img height="16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_(2017).svg/32px-YouTube_full-color_icon_(2017).svg.png" style="margin-left:6px;vertical-align:middle;" width="16"/></a></label><input type="text"/>
+<div style="text-align: center; font-size: 12px; margin-top: 4px;">
+
+</div>
+</div>
+<div class="form-group"><label>Lunghezza manica<a href="https://youtu.be/GbL2IgU74nE?list=TLGGYWWywYU7490wOTA3MjAyNQ" target="_blank"><img height="16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_(2017).svg/32px-YouTube_full-color_icon_(2017).svg.png" style="margin-left:6px;vertical-align:middle;" width="16"/></a></label><input type="text"/>
+<div style="text-align: center; font-size: 12px; margin-top: 4px;">
+
+</div>
+</div>
+<div class="form-group"><label>Circonferenza bicipite<a href="https://youtu.be/AJIE_AkCCjM?list=TLGGD69kkn8uuPowOTA3MjAyNQ" target="_blank"><img height="16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_(2017).svg/32px-YouTube_full-color_icon_(2017).svg.png" style="margin-left:6px;vertical-align:middle;" width="16"/></a></label><input type="text"/>
+<div style="text-align: center; font-size: 12px; margin-top: 4px;">
+
+</div>
+</div>
+<div class="form-group"><label>Circonferenza polso<a href="https://youtu.be/4mtAf5OYAX8?list=TLGGfewW_i2xqdwwOTA3MjAyNQ" target="_blank"><img height="16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_(2017).svg/32px-YouTube_full-color_icon_(2017).svg.png" style="margin-left:6px;vertical-align:middle;" width="16"/></a></label><input type="text"/>
+<div style="text-align: center; font-size: 12px; margin-top: 4px;">
+
+</div>
+</div>
+<div class="form-group"><label>Giromanica</label><input type="text"/></div>
+</div>
+<div class="section-title">Preferenze di Modello</div>
+<div class="form-grid">
+<div class="form-group"><label>Vestibilità</label>
+<select>
+<option value="">Seleziona...</option>
+<option value="Custom">Custom</option>
+<option value="Custom CR">Custom CR</option>
+<option value="Slim Fit">Slim Fit</option>
+</select>
+</div>
+<div class="form-group"><label>Colletto</label>
+<select>
+<option value="">Seleziona...</option>
+<option value="Londra">Londra</option>
+<option value="Botton Down">Botton Down</option>
+<option value="Francese">Francese</option>
+<option value="Coreano">Coreano</option>
+<option value="Truzzi">Truzzi</option>
+<option value="Italiano">Italiano</option>
+</select>
+</div>
+<div class="form-group"><label>Polsini</label>
+<select>
+<option value="">Seleziona...</option>
+<option value="Tondo H7">Tondo H7</option>
+<option value="Smussato">Smussato</option>
+<option value="Gemelli">Gemelli</option>
+<option value="Doppio Uso">Doppio Uso</option>
+</select>
+</div>
+<div class="form-group"><label>Taschino</label>
+<select>
+<option value="">Seleziona...</option>
+<option value="Sì">Sì</option>
+<option value="No">No</option>
+</select>
+</div>
+<div class="form-group"><label>Faldoncino</label>
+<select>
+<option value="">Seleziona...</option>
+<option value="Coperto">Coperto</option>
+<option value="Impunturato Esterno">Impunturato Esterno</option>
+<option value="Liscio">Liscio</option>
+</select>
+</div>
+<div class="form-group"><label>Pochette</label>
+<select>
+<option value="">Seleziona...</option>
+<option value="Sì">Sì</option>
+<option value="No">No</option>
+</select>
+</div>
+</div>
+<div id="tessuto-sezione-wrapper"><div class="section-title">Tessuto e Dettagli</div><div class="form-grid">
+<div class="form-group"><label>Tessuto scelto (Codice)</label><input type="text"/></div>
+<div class="form-group"><label>Colore / Fantasia</label><input type="text"/></div>
+<div class="form-group"><label>Colore Bottoni</label><input type="text"/></div>
+<div class="form-group"><label>Monogramma</label><input placeholder="Iniziali, posizione..." type="text"/></div>
+<div class="form-group">
+<label>Posizione Monogramma</label>
+<select>
+<option value="">Seleziona...</option>
+<option value="4/5 Bottone Sinistro">4/5 Bottone Sinistro</option>
+<option value="4/5 Bottone Destro">4/5 Bottone Destro</option>
+<option value="Polso Sinistro">Polso Sinistro</option>
+<option value="Polso Destro">Polso Destro</option>
+</select>
+</div>
+</div></div>
+<div style="text-align: right; margin-top: 10px;">
+<button onclick="aggiungiSezioneTessuto()" style="padding: 8px 16px; font-size: 14px; border-radius: 6px; background-color: #444; color: white; border: none;" type="button">+ Aggiungi camicia</button>
+</div>
+<script>
+            function aggiungiSezioneTessuto() {
+                const wrapper = document.getElementById("tessuto-sezione-wrapper");
+                const sezioni = wrapper.querySelectorAll(".form-grid");
+                const ultima = sezioni[sezioni.length - 1];
+                const nuova = ultima.cloneNode(true);
+                nuova.style.marginTop = "30px";
+
+                const rimuoviBtn = document.createElement("button");
+                rimuoviBtn.innerText = "Rimuovi questa camicia";
+                rimuoviBtn.style.margin = "10px 0 30px";
+                rimuoviBtn.style.padding = "6px 14px";
+                rimuoviBtn.style.backgroundColor = "#c0392b";
+                rimuoviBtn.style.color = "white";
+                rimuoviBtn.style.border = "none";
+                rimuoviBtn.style.borderRadius = "6px";
+                rimuoviBtn.style.cursor = "pointer";
+
+                rimuoviBtn.onclick = function() {
+                    wrapper.removeChild(nuova);
+                    wrapper.removeChild(rimuoviBtn);
+                };
+
+                wrapper.appendChild(nuova);
+                wrapper.appendChild(rimuoviBtn);
+            }
+        </script>
+<div class="section-title">Note Aggiuntive</div>
+<div class="form-group">
+<label>Note</label>
+<textarea placeholder="Postura, asimmetrie, richieste speciali..."></textarea>
+</div>
+<div class="section-title">Pagamento</div>
+<div class="form-grid" style="page-break-inside: avoid; break-inside: avoid;">
+<div class="form-group">
+<label>Acconto</label>
+<div style="padding: 6px 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 6px; background-color: #eee;">---</div>
+</div>
+<div class="form-group">
+<label>Costo Camicia</label>
+<div style="padding: 6px 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 6px; background-color: #eee;">---</div>
+</div>
+</div>
+<div style="text-align: center; margin-top: 40px;">
+<button onclick="window.print()" style="padding: 10px 20px; font-size: 16px; background-color: #2c3e50; color: white; border: none; border-radius: 6px; cursor: pointer;">
+            Crea PDF
+        </button>
+</div>
+<div style="text-align: center; margin-top: 20px;">
+<button onclick="window.location.href='mailto:info@strepitoso.eu?subject=Scheda%20Rilievo%20Camicia&amp;body=In%20allegato%20il%20PDF%20della%20scheda%20compilata.'" style="padding: 10px 20px; font-size: 16px; background-color: #006699; color: white; border: none; border-radius: 6px; cursor: pointer;">
+            Invia via Email alla Sartoria
+        </button>
+<p style="font-size: 12px; color: #555;">Dopo aver salvato il PDF, allegalo manualmente al messaggio email che si aprirà.</p>
+</div>
+<div class="firma-cliente-stampa" style="display: none; text-align: right; font-size: 12px; margin-top: 40px;">
+        Fine modulo - Firma cliente
+    </div>
+</div>
